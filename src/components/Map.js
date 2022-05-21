@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import MapItem from "./MapItem";
+import ImageMap from "image-map"
 
 const Map = ({imageURL, items}) => {
     console.log(items);
     console.log(imageURL);
-    // const [image, setImage] = useState(null)
-    // console.log(image);
     const wrapstyle = {
         position:'relative',
         left: '2%',
@@ -13,16 +12,14 @@ const Map = ({imageURL, items}) => {
         textAlign: 'center',
         width: '50%',
         height: '',
-        overflow:'auto'
     }
     const imgstyle = {
-        maxWidth: 'initial',
         margin: 'auto',
     }
     // console.log(wrapstyle);
     return (
         <div style={wrapstyle}>
-            <img style={imgstyle} src={imageURL} useMap="#map"/>
+            <img style={imgstyle} onLoad={(e)=>ImageMap('img[usemap]')} src={imageURL} useMap="#map"/>
             <map name="map">
                 {items.map((i,n) => <MapItem dataObj={i} key={n}/>)}
             </map>
