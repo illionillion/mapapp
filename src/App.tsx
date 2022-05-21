@@ -29,7 +29,7 @@ function App() {
           <Routes>
             <Route index element={<Top />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="item" element={<Map imageURL={require('./map.png')} items={items}/>} />
+            <Route path="item" element={<Map imageURL={require('./data/map.png')} items={items}/>} />
           </Routes>
         </Layout>
         <Footer />

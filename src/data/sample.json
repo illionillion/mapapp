@@ -1,0 +1,17 @@
+{
+    "name": "サンプル施設",
+    "text": "ここにサンプル施設の説明が入ります。",
+    "mapPath": "./data/map.png",
+    "mapSize": [483, 478],
+    "clickAreaList": [
+        {
+            "name": "台所",
+            "areaType": "rect",
+            "coordinates": [
+                [200, 200],
+                [300, 300]
+            ],
+            "photoPath": "./data/kitchen.jpg"
+        }
+    ]
+}
