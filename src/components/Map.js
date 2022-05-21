@@ -6,8 +6,8 @@ const Map = ({imageURL, items}) => {
     console.log(imageURL);
     const style = {
         position:'relative',
-        width:'500px',
-        height:'500px',
+        backgroundColor:'#ffffff',
+        textAlign: 'center'
 
     }
     console.log(style);
@@ -18,7 +18,7 @@ const Map = ({imageURL, items}) => {
                 {items.map((i,n) => <MapItem dataObj={i} key={n}/>)}
             </map>
 
-        </div>
+         </div>
     )
 
 }
