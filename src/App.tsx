@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -29,7 +27,7 @@ function App() {
           <Routes>
             <Route index element={<Top />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="item" element={<Map imageURL={require('./data/map.png')} items={items}/>} />
+            <Route path="item" element={<Map/>} />
           </Routes>
         </Layout>
         <Footer />

@@ -1,8 +1,14 @@
-import React, { useState } from "react";
 import MapItem from "./MapItem";
 import ImageMap from "image-map"
+import jsonData from '../data/sample.json';
+console.log(jsonData);
 
-const Map = ({imageURL, items}) => {
+
+const Map = () => {
+    const items = jsonData.clickAreaList
+    const imageURL = jsonData.mapPath
+    const mapname = jsonData.name
+    const maptext = jsonData.text
     console.log(items);
     console.log(imageURL);
     const wrapstyle = {
@@ -19,10 +25,12 @@ const Map = ({imageURL, items}) => {
     // console.log(wrapstyle);
     return (
         <div style={wrapstyle}>
-            <img style={imgstyle} onLoad={(e)=>ImageMap('img[usemap]')} src={imageURL} useMap="#map"/>
+            <p>{mapname}</p>
+            <img style={imgstyle} onLoad={(e)=>ImageMap('img[usemap]')} src={require(`../data/${imageURL}`)} useMap="#map"/>
             <map name="map">
                 {items.map((i,n) => <MapItem dataObj={i} key={n}/>)}
             </map>
+            <div>{maptext}</div>
 
          </div>
     )

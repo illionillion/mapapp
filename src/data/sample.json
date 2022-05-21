@@ -1,17 +1,26 @@
 {
     "name": "サンプル施設",
     "text": "ここにサンプル施設の説明が入ります。",
-    "mapPath": "./data/map.png",
+    "mapPath": "map.png",
     "mapSize": [483, 478],
     "clickAreaList": [
         {
-            "name": "台所",
+            "name": "キッチン",
             "areaType": "rect",
             "coordinates": [
-                [200, 200],
-                [300, 300]
+                [4, 69],
+                [150, 196]
             ],
-            "photoPath": "./data/kitchen.jpg"
+            "photoPath": "kitchen.jpg"
+        },
+        {
+            "name": "バルコニー",
+            "areaType": "rect",
+            "coordinates": [
+                [0, 474],
+                [479, 414]
+            ],
+            "photoPath": "balcony.jpg"
         }
     ]
 }
