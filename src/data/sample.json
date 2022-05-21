@@ -1,7 +1,7 @@
 {
     "name": "サンプル施設",
     "text": "ここにサンプル施設の説明が入ります。",
-    "mapPath": "./data/map.png",
+    "mapPath": "map.png",
     "mapSize": [483, 478],
     "clickAreaList": [
         {
@@ -11,7 +11,7 @@
                 [0, 474],
                 [479,414]
             ],
-            "photoPath": "./data/balcony.jpeg"
+            "photoPath": "balcony.jpeg"
         },
         {
             "name": "CL",
@@ -20,7 +20,7 @@
                 [406, 299],
                 [478,415]
             ],
-            "photoPath": "./data/closet.jpeg"
+            "photoPath": "closet.jpeg"
         },
         {
             "name": "洋室",
@@ -29,7 +29,7 @@
                 [10, 196],
                 [403,414]
             ],
-            "photoPath": "./data/westernStyleRoom.jpeg"
+            "photoPath": "westernStyleRoom.jpeg"
         },
         {
             "name": "トイレ",
@@ -38,7 +38,7 @@
                 [479, 292],
                 [408,196]
             ],
-            "photoPath": "./data/restRoom.jpeg"
+            "photoPath": "restRoom.jpeg"
         },
         {
             "name": "浴槽",
@@ -47,7 +47,7 @@
                 [356, 74],
                 [474,188]
             ],
-            "photoPath": "./data/bathRoom.jpeg"
+            "photoPath": "bathRoom.jpeg"
         },
         {
             "name": "洗面所",
@@ -56,7 +56,7 @@
                 [230, 71],
                 [349,190]
             ],
-            "photoPath": "./data/washRoom.jpeg"
+            "photoPath": "washRoom.jpeg"
         },
         {
             "name": "玄関",
@@ -65,7 +65,7 @@
                 [224, 195],
                 [155,67]
             ],
-            "photoPath": "./data/entrance.jpeg"
+            "photoPath": "entrance.jpeg"
         },
         {
             "name": "キッチン",
@@ -74,7 +74,7 @@
                 [4, 69],
                 [150,196]
             ],
-            "photoPath": "./data/kitchen.jpeg"
+            "photoPath": "kitchen.jpeg"
         }
     ]
 }
