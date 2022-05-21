@@ -7,11 +7,10 @@ export type FacilityItem = {
 }
 
 export type ClickArea = {
+    name: string,
     areaType: string,
     coordinates: Coordinate[],
     photoPath: string
 }
 
-type Coordinate ={
-    coordinate:number
-}
+type Coordinate = number[]
