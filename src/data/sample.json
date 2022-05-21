@@ -29,7 +29,7 @@
                 [10, 196],
                 [403,414]
             ],
-            "photoPath": "./data/kitchen.jpeg"
+            "photoPath": "./data/westernStyleRoom.jpeg"
         },
         {
             "name": "トイレ",
@@ -38,7 +38,7 @@
                 [479, 292],
                 [408,196]
             ],
-            "photoPath": "./data/kitchen.jpeg"
+            "photoPath": "./data/restRoom.jpeg"
         },
         {
             "name": "浴槽",
@@ -47,7 +47,7 @@
                 [356, 74],
                 [474,188]
             ],
-            "photoPath": "./data/kitchen.jpeg"
+            "photoPath": "./data/bathRoom.jpeg"
         },
         {
             "name": "洗面所",
@@ -56,7 +56,7 @@
                 [230, 71],
                 [349,190]
             ],
-            "photoPath": "./data/kitchen.jpeg"
+            "photoPath": "./data/washRoom.jpeg"
         },
         {
             "name": "玄関",
@@ -65,7 +65,7 @@
                 [224, 195],
                 [155,67]
             ],
-            "photoPath": "./data/kitchen.jpeg"
+            "photoPath": "./data/entrance.jpeg"
         },
         {
             "name": "キッチン",
