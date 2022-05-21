@@ -12,6 +12,4 @@ export type ClickArea = {
     photoPath: string
 }
 
-type Coordinate ={
-    coordinate:number
-}
+type Coordinate = number[]
