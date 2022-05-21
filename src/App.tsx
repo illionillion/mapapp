@@ -3,18 +3,19 @@ import MapItem from "./components/MapItem";
 import Map from "./components/Map";
 
 const items = [
-  {coords: '100,400, 390,500', text:'バルコニー'},
-  // ↓div使ってた時の
-  // {top: '88%',left: '20%',width: '280px',height: '50px',text:'バルコニー'},
-  // {top: '10%',left: '20%',width: '50px',height: '90px',text:'A'},
-  // {top: '30%',left: '10%',width: '50px',height: '90px',text:'B'},
-  // {top: '70%',left: '50%',width: '50px',height: '90px',text:'C'},
-  // {top: '50%',left: '20%',width: '50px',height: '90px',text:'D'},
+  {coords: '0,474,479,414', text:'バルコニー'},
+  {coords: '406,299,478,415', text:'CL'},
+  {coords: '10,196,403,414', text:'洋室'},
+  {coords: '479,292,408,196', text:'トイレ'},
+  {coords: '356,74,474,188', text:'浴槽'},
+  {coords: '230,71,349,190', text:'洗面所'},
+  {coords: '224,195,155,67', text:'玄関'},
+  {coords: '4,69,150,196', text:'キッチン'},
 ]
 function App() {
   return (
     <>
-      <Map imageURL={'https://illionillion.github.io/map_test/map.jpg'} items={items}/>
+      <Map imageURL={require('./map.png')} items={items}/>
     </>
   );
 }
