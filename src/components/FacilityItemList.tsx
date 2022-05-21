@@ -21,32 +21,36 @@ const sampleObj3 = {
   mapPath: "#",
 };
 
-const sampleObjs = [sampleObj1, sampleObj2,sampleObj3];
+const sampleObjs = [sampleObj1, sampleObj2, sampleObj3];
 
 export const FacilityItemList = (): JSX.Element => {
   const [inputValue, setInputValue] = useState("");
-  const [hitObjs, setHitObjs] = useState([
-    { name: "", text: "" , mapPath: "" },
-  ]);
+  const [hitObjs, setHitObjs] = useState([{ name: "", text: "", mapPath: "" }]);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 
   useEffect(() => {
-    const newHitObjs = sampleObjs.filter(obj => obj.name.includes(inputValue)) 
+    const newHitObjs = sampleObjs.filter((obj) =>
+      obj.name.includes(inputValue)
+    );
     setHitObjs(newHitObjs);
-    console.log();
-  },[inputValue])
+  }, [inputValue]);
 
   return (
     <div className="py-12 ">
-      <h2 className="text-3xl">施設一覧</h2>
-      <input
-        type="text"
-        placeholder="施設名から検索"
-        value={inputValue}
-        onChange={handleChange}
-      ></input>
+      <div className="flex  md:justify-start justify-center flex-col md:flex-row items-center gap-8">
+        <h2 className="text-3xl md:text-start text-center">施設一覧</h2>
+        <input
+          type="text"
+          placeholder="施設名から検索"
+          value={inputValue}
+          onChange={handleChange}
+          className="border-0 px-4 py-2 block  w-64"
+          
+        ></input>
+      </div>
+
       <div className="h-screen overflow-scroll">
         {inputValue === ""
           ? sampleObjs.map((obj, index) => {
