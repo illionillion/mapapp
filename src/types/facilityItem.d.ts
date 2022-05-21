@@ -14,3 +14,5 @@ export type ClickArea = {
 }
 
 type Coordinate = number[]
+
+// export type ImageMap = (query:string) => void

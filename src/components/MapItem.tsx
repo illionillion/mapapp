@@ -1,4 +1,5 @@
-const MapItem = ({dataObj}) => {
+// import {FacilityItem, ClickArea } from "../types/facilityItem"
+const MapItem = ({dataObj}:any):JSX.Element => {
     // console.log(dataObj);
     const style = {
     }
