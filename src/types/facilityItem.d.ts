@@ -2,16 +2,16 @@ export type FacilityItem = {
     name:string,
     text:string,
     mapPath:string,
-    mapSize:coordinate[],
+    mapSize:Coordinate,
     clickAreaList:ClickArea[]
 }
 
 export type ClickArea = {
     areaType: string,
-    coordinates: coordinate[],
+    coordinates: Coordinate[],
     photoPath: string
 }
 
-type coordinate ={
+type Coordinate ={
     coordinate:number
 }
