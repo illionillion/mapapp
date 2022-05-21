@@ -1,6 +1,13 @@
 import React from "react";
-import MapItem from "./components/MapItem";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Layout } from "./components/Layout";
+import { NotFound } from "./components/NotFound";
+import { Top } from "./components/Top";
 import Map from "./components/Map";
+import "./index.css";
 
 const items = [
   {coords: '0,474,479,414', text:'バルコニー'},
@@ -12,11 +19,22 @@ const items = [
   {coords: '224,195,155,67', text:'玄関'},
   {coords: '4,69,150,196', text:'キッチン'},
 ]
+
 function App() {
   return (
-    <>
-      <Map imageURL={require('./map.png')} items={items}/>
-    </>
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Layout>
+          <Routes>
+            <Route index element={<Top />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="item" element={<Map imageURL={require('./map.png')} items={items}/>} />
+          </Routes>
+        </Layout>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 
