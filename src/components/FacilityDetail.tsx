@@ -7,9 +7,9 @@ export const FacilityDetail = (): JSX.Element => {
     return (
       <div>
           <FacilityTitle/>
-          <div style={{display:'flex'}}>
+          <div style={{display:'flex',alignItems:'center'}}>
             <Map />
-            <div style={{overflow:'auto',height:'500px'}}>
+            <div style={{width:'35%',height:'500px',margin:'auto'}}>
               <ImageSlider />
             </div>
           </div>

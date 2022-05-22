@@ -13,7 +13,7 @@ export const ImageSlider = (): JSX.Element => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
   let settingsSub = {
     arrows: false,
@@ -26,11 +26,15 @@ export const ImageSlider = (): JSX.Element => {
     focusOnSelect: true,
     autoplay: true,
   };
+  const listyle:any = {
+    backgroundColor:'#ffffff',
+    margin:'10px',
+  }
   return (
-    <div>
+    <div style={listyle}>
       <Slider {...settingsMain} asNavFor={navSub} ref={sliderMain => setNavMain(sliderMain)}>
         {clickAreaList.map((v) => (
-          <li key={v.name}>
+          <li  key={v.name}>
             <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
           </li>
         ))}

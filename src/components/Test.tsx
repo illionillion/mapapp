@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import type { FacilityItem } from "../types/facilityItem";
+import type { Facility } from "../types/facilityItem"
 
-type FacilityItemResponse = FacilityItem &{
+type FacilityItemResponse = Facility &{
   id: string
 }
 
