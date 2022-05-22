@@ -38,14 +38,6 @@ export const ImageSlider = ({id}:Props): JSX.Element => {
     backgroundColor:'#ffffff',
     margin:'10px',
   }
-  const { clickArea } = useSelector<
-		AppState,
-		{ clickArea: number; }
-	>((state) => ({
-		clickArea: state.clickArea.id,
-	}));
-	const dispatch = useDispatch();
-	const { setClickArea } = clickAreaSlice.actions;
   return (
     <div style={listyle}>
       <Slider {...settingsMain} asNavFor={navSub} ref={sliderMain => setNavMain(sliderMain)}>
