@@ -20,7 +20,7 @@ export const FacilityItem = ({
       <div className="md:w-3/12 text-center md:text-left bg-gray-300">
         <Link to={itemPath}>
           <img
-            src={mapPath}
+            src={require(`../data/${mapPath}`)}
             alt="施設の画像が入ります"
             className="h-full w-full"
           />
