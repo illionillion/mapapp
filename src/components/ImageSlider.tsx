@@ -2,11 +2,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from "react";
 import Slider from "react-slick";
 import Facility from "../data/sample.json";
-
 import { clickAreaSlice } from '../features/clickArea';
 import { AppState } from '../store';
 
-export const ImageSlider = (): JSX.Element => {
+interface Props{
+  id:number;
+}
+
+export const ImageSlider = ({id}:Props): JSX.Element => {
+
   const clickAreaList = Facility.clickAreaList;
   // TODO: any型を具体的な型に修正
   const [navMain, setNavMain] = useState<any>()

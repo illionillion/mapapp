@@ -1,39 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { FacilityItem } from "./FacilityItem";
 import type {Facility} from "../types/facilityItem"
-import data from "../data/sample.json";
+import datas from "../data/sample2.json";
 
 
 type FacilityRes = Facility & {
-    id: string
+    id: number
 }
 
-const sampleObj1:FacilityRes = {
-  ...data,
-  id:'1'
-};
-const sampleObj2:FacilityRes = {
-  ...data,
-  id:'2'
-};
-const sampleObj3:FacilityRes = {
-  ...data,
-  id:'3'
-};
-
-const sampleObjs = [sampleObj1, sampleObj2, sampleObj3];
-
+const sampleObjs = datas.map((data,index) => ({...data,id:index}));
 
 
 export const FacilityItemList = (): JSX.Element => {
   const [inputValue, setInputValue] = useState("");
-  const [hitObjs, setHitObjs] = useState([{ name: "", text: "", mapPath: "" ,id:""}]);
+  const [hitObjs, setHitObjs] = useState([{ name: "", text: "", mapPath: "" ,id:0}]);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
-
-  console.log(sampleObjs)
- 
 
   useEffect(() => {
     const newHitObjs = sampleObjs.filter((obj) =>

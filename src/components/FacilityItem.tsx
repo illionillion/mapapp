@@ -5,7 +5,7 @@ interface Props {
   name: string;
   text: string;
   mapPath: string;
-  id: string;
+  id: number;
 }
 
 export const FacilityItem = ({

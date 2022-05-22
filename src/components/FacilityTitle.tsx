@@ -1,7 +1,10 @@
-import jsonData from '../data/sample.json'
-const FacilityTitle = ():JSX.Element => {
+import jsonDatas from '../data/sample2.json'
+interface Props{
+    id:number
+}
+const FacilityTitle = ({id}:Props):JSX.Element => {
 
-    const mapname = jsonData.name
+    const mapname = jsonDatas[id].name
 
     const style = {
         fontSize:'2em',
