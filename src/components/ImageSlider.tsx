@@ -2,7 +2,11 @@ import { useState } from "react";
 import Slider from "react-slick";
 import Facility from "../data/sample.json";
 
-export const ImageSlider = (): JSX.Element => {
+interface Props{
+  id:number;
+}
+
+export const ImageSlider = ({id}:Props): JSX.Element => {
   const clickAreaList = Facility.clickAreaList;
   // TODO: any型を具体的な型に修正
   const [navMain, setNavMain] = useState<any>()

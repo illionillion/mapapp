@@ -1,9 +1,15 @@
 import MapItem from "./MapItem";
-import jsonData from '../data/sample.json';
+import jsonDatas from '../data/sample2.json';
 import ImageMap from 'image-map'
 
-const Map = ():JSX.Element => {
+interface Props { 
+    id:number;
+}
+
+const Map = ({id}:Props):JSX.Element => {
     
+    const jsonData = jsonDatas[id]
+    console.log(jsonData)
     const items = jsonData.clickAreaList
     const imageURL = jsonData.mapPath
     const wrapstyle:any = {
