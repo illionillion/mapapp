@@ -36,7 +36,6 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
       onClick={() => {
 				dispatch(setClickArea({id: dataObj.id}))
         whenclick(dataObj.name)
-        alert(dataObj.name + "\n" + dataObj.photoPath);
       }}
 			alt={dataObj.name}
     ></area>
