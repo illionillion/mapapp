@@ -1,24 +1,47 @@
+import { useState } from "react";
 import Slider from "react-slick";
 import Facility from "../data/sample.json";
 
 export const ImageSlider = (): JSX.Element => {
   const clickAreaList = Facility.clickAreaList;
-  let settings = {
-    dots: true,
+  // TODO: any型を具体的な型に修正
+  const [navMain, setNavMain] = useState<any>()
+  const [navSub, setNavSub] = useState<any>()
+  let settingsMain = {
+    arrows: false,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
   };
+  let settingsSub = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    focusOnSelect: true,
+    autoplay: true,
+  };
   return (
     <div>
-      <Slider {...settings}>
+      <Slider {...settingsMain} asNavFor={navSub} ref={sliderMain => setNavMain(sliderMain)}>
         {clickAreaList.map((v) => (
           <li key={v.name}>
             <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
           </li>
         ))}
-    </Slider>
+      </Slider>
+      <Slider {...settingsSub} asNavFor={navMain} ref={sliderSub => setNavSub(sliderSub)}>
+        {clickAreaList.map((v) => (
+          <li key={v.name}>
+            <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
+          </li>
+        ))}
+      </Slider>
     </div>
   );
 };
