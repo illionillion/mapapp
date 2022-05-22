@@ -26,7 +26,7 @@ const Map = ():JSX.Element => {
             {/* <p>{mapname}</p> */}
             <img style={imgstyle} onLoad = {(e) => ImageMap('img[usemap]')} src = {require(`../data/${imageURL}`)} useMap = "#map"/>
             <map name="map">
-                {items.map((i,n) => <MapItem dataObj={i} key={n}/>)}
+                {items.map((i,n) => <MapItem dataObj={{...i, id: n}} key={n}/>)}
             </map>
             {/* <div>{maptext}</div> */}
 
