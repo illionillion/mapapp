@@ -1,9 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { useState } from "react";
 import Slider from "react-slick";
 import Facility from "../data/sample.json";
-import { clickAreaSlice } from '../features/clickArea';
-import { AppState } from '../store';
+
 
 interface Props{
   id:number;
@@ -32,7 +30,7 @@ export const ImageSlider = ({id}:Props): JSX.Element => {
     slidesToScroll: 1,
     swipeToSlide: true,
     focusOnSelect: true,
-    autoplay: true,
+    // autoplay: true,
   };
   const listyle:any = {
     backgroundColor:'#ffffff',

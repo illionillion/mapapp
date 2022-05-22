@@ -22,6 +22,12 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
 	}));
 	const dispatch = useDispatch();
 	const { setClickArea } = clickAreaSlice.actions;
+
+  const whenclick = (name:any) => {
+
+    ((document.querySelector(`img[alt=${name}]`)) as HTMLElement).click()
+    
+  }
   return (
     <area
       shape={dataObj.areaType}
@@ -29,6 +35,7 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
       coords={coordsList}
       onClick={() => {
 				dispatch(setClickArea({id: dataObj.id}))
+        whenclick(dataObj.name)
         alert(dataObj.name + "\n" + dataObj.photoPath);
       }}
 			alt={dataObj.name}
