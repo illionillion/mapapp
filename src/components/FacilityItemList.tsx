@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { FacilityItem } from "./FacilityItem";
-import store from '../store/admin'
 import type {Facility} from "../types/facilityItem"
+import data from "../data/sample.json";
+
 
 type FacilityRes = Facility & {
     id: string
 }
 
-const sampleObj = store.getState().facility
-
-
 const sampleObj1:FacilityRes = {
-  ...sampleObj,
+  ...data,
   id:'1'
 };
 const sampleObj2:FacilityRes = {
-  ...sampleObj,
+  ...data,
   id:'2'
 };
 const sampleObj3:FacilityRes = {
-  ...sampleObj,
+  ...data,
   id:'3'
 };
 
