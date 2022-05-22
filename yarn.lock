@@ -5497,6 +5497,11 @@ immediate@~3.0.5:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
   integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
+  
+image-map@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/image-map/-/image-map-2.0.1.tgz#d9e87184cd944b263135d9f2e8dec5a75a8a5c7a"
+  integrity sha512-6SVn3CK7n4wtaWqW3vRSFvKKyQpChr7ADECmLTS9WsD4mTivkRgZ8OqfUBsg7bo5hm81oiO02aAyZ1dNu20xXQ==
 
 immer@^9.0.7:
   version "9.0.14"
