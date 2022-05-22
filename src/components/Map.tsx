@@ -6,8 +6,8 @@ const Map = ():JSX.Element => {
     
     const items = jsonData.clickAreaList
     const imageURL = jsonData.mapPath
-    const mapname = jsonData.name
-    const maptext = jsonData.text
+    // const mapname = jsonData.name
+    // const maptext = jsonData.text
     console.log(items);
     console.log(imageURL);
     const wrapstyle:any = {
@@ -23,12 +23,12 @@ const Map = ():JSX.Element => {
     // console.log(wrapstyle);
     return (
         <div style={wrapstyle}>
-            <p>{mapname}</p>
+            {/* <p>{mapname}</p> */}
             <img style={imgstyle} onLoad = {(e) => ImageMap('img[usemap]')} src = {require(`../data/${imageURL}`)} useMap = "#map"/>
             <map name="map">
                 {items.map((i,n) => <MapItem dataObj={i} key={n}/>)}
             </map>
-            <div>{maptext}</div>
+            {/* <div>{maptext}</div> */}
 
          </div>
     )
