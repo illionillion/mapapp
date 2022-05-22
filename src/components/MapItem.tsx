@@ -8,7 +8,6 @@ const MapItem = ({dataObj}:any):JSX.Element => {
         }
     }
     coordsList = coordsList.replace(',','')
-    console.log(coordsList);
     return(
         <area shape={dataObj.areaType} style={style} coords={coordsList} onClick={()=>{alert(dataObj.name+'\n'+dataObj.photoPath)}}></area>
     )
