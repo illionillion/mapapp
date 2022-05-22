@@ -8,7 +8,7 @@ import { ClickArea } from "../types/facilityItem"
 
 
 export const Top = ():JSX.Element => {
-  /*
+  
   const [count ,setCount] = useState(0)
   const objList = Facility.clickAreaList
   const [tarObj, setTarObj] = useState<ClickArea>(objList[0])
@@ -17,11 +17,10 @@ export const Top = ():JSX.Element => {
   useInterval(() => {
     setCount(count+1)
     setTarObj(objList[count%objList.length])
-  }, 3000);
-*/
+  }, 5000);
+
   return (
     <div>
-      トップページです
       <About/>
       <FacilityItemList/>
     </div>
