@@ -1,12 +1,16 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from "react";
 import Slider from "react-slick";
 import Facility from "../data/sample.json";
+import { clickAreaSlice } from '../features/clickArea';
+import { AppState } from '../store';
 
 interface Props{
   id:number;
 }
 
 export const ImageSlider = ({id}:Props): JSX.Element => {
+
   const clickAreaList = Facility.clickAreaList;
   // TODO: any型を具体的な型に修正
   const [navMain, setNavMain] = useState<any>()
@@ -34,6 +38,14 @@ export const ImageSlider = ({id}:Props): JSX.Element => {
     backgroundColor:'#ffffff',
     margin:'10px',
   }
+  const { clickArea } = useSelector<
+		AppState,
+		{ clickArea: number; }
+	>((state) => ({
+		clickArea: state.clickArea.id,
+	}));
+	const dispatch = useDispatch();
+	const { setClickArea } = clickAreaSlice.actions;
   return (
     <div style={listyle}>
       <Slider {...settingsMain} asNavFor={navSub} ref={sliderMain => setNavMain(sliderMain)}>
