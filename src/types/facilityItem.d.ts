@@ -1,4 +1,4 @@
-export type FacilityItem = {
+export type Facility = {
     name:string,
     text:string,
     mapPath:string,

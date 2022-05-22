@@ -1,0 +1,242 @@
+[
+    {
+        "name": "サンプル施設1",
+        "text": "ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。",
+        "mapPath": "map.png",
+        "mapSize": [483, 478],
+        "clickAreaList": [
+            {
+                "name": "バルコニー",
+                "areaType": "rect",
+                "coordinates": [
+                    [0, 474],
+                    [479,414]
+                ],
+                "photoPath": "balcony.jpeg"
+            },
+            {
+                "name": "CL",
+                "areaType": "rect",
+                "coordinates": [
+                    [406, 299],
+                    [478,415]
+                ],
+                "photoPath": "closet.jpeg"
+            },
+            {
+                "name": "洋室",
+                "areaType": "rect",
+                "coordinates": [
+                    [10, 196],
+                    [403,414]
+                ],
+                "photoPath": "westernStyleRoom.jpeg"
+            },
+            {
+                "name": "トイレ",
+                "areaType": "rect",
+                "coordinates": [
+                    [479, 292],
+                    [408,196]
+                ],
+                "photoPath": "restRoom.jpeg"
+            },
+            {
+                "name": "浴槽",
+                "areaType": "rect",
+                "coordinates": [
+                    [356, 74],
+                    [474,188]
+                ],
+                "photoPath": "bathRoom.jpeg"
+            },
+            {
+                "name": "洗面所",
+                "areaType": "rect",
+                "coordinates": [
+                    [230, 71],
+                    [349,190]
+                ],
+                "photoPath": "washRoom.jpeg"
+            },
+            {
+                "name": "玄関",
+                "areaType": "rect",
+                "coordinates": [
+                    [224, 195],
+                    [155,67]
+                ],
+                "photoPath": "entrance.jpeg"
+            },
+            {
+                "name": "キッチン",
+                "areaType": "rect",
+                "coordinates": [
+                    [4, 69],
+                    [150,196]
+                ],
+                "photoPath": "kitchen.jpeg"
+            }
+        ]
+    },
+    {
+        "name": "サンプル施設2",
+        "text": "ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。",
+        "mapPath": "map.png",
+        "mapSize": [483, 478],
+        "clickAreaList": [
+            {
+                "name": "CL",
+                "areaType": "rect",
+                "coordinates": [
+                    [406, 299],
+                    [478,415]
+                ],
+                "photoPath": "closet.jpeg"
+            },
+            {
+                "name": "バルコニー",
+                "areaType": "rect",
+                "coordinates": [
+                    [0, 474],
+                    [479,414]
+                ],
+                "photoPath": "balcony.jpeg"
+            },
+            {
+                "name": "洋室",
+                "areaType": "rect",
+                "coordinates": [
+                    [10, 196],
+                    [403,414]
+                ],
+                "photoPath": "westernStyleRoom.jpeg"
+            },
+            {
+                "name": "トイレ",
+                "areaType": "rect",
+                "coordinates": [
+                    [479, 292],
+                    [408,196]
+                ],
+                "photoPath": "restRoom.jpeg"
+            },
+            {
+                "name": "浴槽",
+                "areaType": "rect",
+                "coordinates": [
+                    [356, 74],
+                    [474,188]
+                ],
+                "photoPath": "bathRoom.jpeg"
+            },
+            {
+                "name": "洗面所",
+                "areaType": "rect",
+                "coordinates": [
+                    [230, 71],
+                    [349,190]
+                ],
+                "photoPath": "washRoom.jpeg"
+            },
+            {
+                "name": "玄関",
+                "areaType": "rect",
+                "coordinates": [
+                    [224, 195],
+                    [155,67]
+                ],
+                "photoPath": "entrance.jpeg"
+            },
+            {
+                "name": "キッチン",
+                "areaType": "rect",
+                "coordinates": [
+                    [4, 69],
+                    [150,196]
+                ],
+                "photoPath": "kitchen.jpeg"
+            }
+        ]
+    },
+    {
+        "name": "サンプル施設3",
+        "text": "ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。ここにサンプル施設の説明が入ります。",
+        "mapPath": "map.png",
+        "mapSize": [483, 478],
+        "clickAreaList": [
+            {
+                "name": "洋室",
+                "areaType": "rect",
+                "coordinates": [
+                    [10, 196],
+                    [403,414]
+                ],
+                "photoPath": "westernStyleRoom.jpeg"
+            },
+            {
+                "name": "バルコニー",
+                "areaType": "rect",
+                "coordinates": [
+                    [0, 474],
+                    [479,414]
+                ],
+                "photoPath": "balcony.jpeg"
+            },
+            {
+                "name": "CL",
+                "areaType": "rect",
+                "coordinates": [
+                    [406, 299],
+                    [478,415]
+                ],
+                "photoPath": "closet.jpeg"
+            },
+            {
+                "name": "トイレ",
+                "areaType": "rect",
+                "coordinates": [
+                    [479, 292],
+                    [408,196]
+                ],
+                "photoPath": "restRoom.jpeg"
+            },
+            {
+                "name": "浴槽",
+                "areaType": "rect",
+                "coordinates": [
+                    [356, 74],
+                    [474,188]
+                ],
+                "photoPath": "bathRoom.jpeg"
+            },
+            {
+                "name": "洗面所",
+                "areaType": "rect",
+                "coordinates": [
+                    [230, 71],
+                    [349,190]
+                ],
+                "photoPath": "washRoom.jpeg"
+            },
+            {
+                "name": "玄関",
+                "areaType": "rect",
+                "coordinates": [
+                    [224, 195],
+                    [155,67]
+                ],
+                "photoPath": "entrance.jpeg"
+            },
+            {
+                "name": "キッチン",
+                "areaType": "rect",
+                "coordinates": [
+                    [4, 69],
+                    [150,196]
+                ],
+                "photoPath": "kitchen.jpeg"
+            }
+        ]
+    }
+]
