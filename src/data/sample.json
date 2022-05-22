@@ -5,13 +5,76 @@
     "mapSize": [483, 478],
     "clickAreaList": [
         {
-            "name": "台所",
+            "name": "バルコニー",
             "areaType": "rect",
             "coordinates": [
-                [200, 200],
-                [300, 300]
+                [0, 474],
+                [479,414]
             ],
-            "photoPath": "kitchen.jpg"
+            "photoPath": "balcony.jpeg"
+        },
+        {
+            "name": "CL",
+            "areaType": "rect",
+            "coordinates": [
+                [406, 299],
+                [478,415]
+            ],
+            "photoPath": "closet.jpeg"
+        },
+        {
+            "name": "洋室",
+            "areaType": "rect",
+            "coordinates": [
+                [10, 196],
+                [403,414]
+            ],
+            "photoPath": "westernStyleRoom.jpeg"
+        },
+        {
+            "name": "トイレ",
+            "areaType": "rect",
+            "coordinates": [
+                [479, 292],
+                [408,196]
+            ],
+            "photoPath": "restRoom.jpeg"
+        },
+        {
+            "name": "浴槽",
+            "areaType": "rect",
+            "coordinates": [
+                [356, 74],
+                [474,188]
+            ],
+            "photoPath": "bathRoom.jpeg"
+        },
+        {
+            "name": "洗面所",
+            "areaType": "rect",
+            "coordinates": [
+                [230, 71],
+                [349,190]
+            ],
+            "photoPath": "washRoom.jpeg"
+        },
+        {
+            "name": "玄関",
+            "areaType": "rect",
+            "coordinates": [
+                [224, 195],
+                [155,67]
+            ],
+            "photoPath": "entrance.jpeg"
+        },
+        {
+            "name": "キッチン",
+            "areaType": "rect",
+            "coordinates": [
+                [4, 69],
+                [150,196]
+            ],
+            "photoPath": "kitchen.jpeg"
         }
     ]
 }
