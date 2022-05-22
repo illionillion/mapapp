@@ -15,7 +15,7 @@ const items = [
 export const FacilityDetail = (): JSX.Element => {
     return (
       <div>
-          <Map imageURL={require('../data/map.png')} items={items}/>
+          <Map />
           <ImageSlider />
       </div>
     );
