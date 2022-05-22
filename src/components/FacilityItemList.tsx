@@ -13,7 +13,7 @@ const sampleObjs = datas.map((data,index) => ({...data,id:index}));
 
 export const FacilityItemList = (): JSX.Element => {
   const [inputValue, setInputValue] = useState("");
-  const [hitObjs, setHitObjs] = useState([{ name: "", text: "", mapPath: "" ,id:0}]);
+  const [hitObjs, setHitObjs] = useState<FacilityRes[]>([...sampleObjs]);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
@@ -47,7 +47,7 @@ export const FacilityItemList = (): JSX.Element => {
                   key={index}
                   name={obj.name}
                   text={obj.text}
-                  mapPath={obj.mapPath}
+                  mapPath={obj.clickAreaList[0].photoPath}
                   id={obj.id}
                 />
               );
@@ -58,7 +58,7 @@ export const FacilityItemList = (): JSX.Element => {
                   key={index}
                   name={obj.name}
                   text={obj.text}
-                  mapPath={obj.mapPath}
+                  mapPath={obj.clickAreaList[0].photoPath}
                   id={obj.id}
                 />
               );

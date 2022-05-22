@@ -86,15 +86,6 @@
         "mapSize": [483, 478],
         "clickAreaList": [
             {
-                "name": "バルコニー",
-                "areaType": "rect",
-                "coordinates": [
-                    [0, 474],
-                    [479,414]
-                ],
-                "photoPath": "balcony.jpeg"
-            },
-            {
                 "name": "CL",
                 "areaType": "rect",
                 "coordinates": [
@@ -102,6 +93,15 @@
                     [478,415]
                 ],
                 "photoPath": "closet.jpeg"
+            },
+            {
+                "name": "バルコニー",
+                "areaType": "rect",
+                "coordinates": [
+                    [0, 474],
+                    [479,414]
+                ],
+                "photoPath": "balcony.jpeg"
             },
             {
                 "name": "洋室",
@@ -166,6 +166,15 @@
         "mapSize": [483, 478],
         "clickAreaList": [
             {
+                "name": "洋室",
+                "areaType": "rect",
+                "coordinates": [
+                    [10, 196],
+                    [403,414]
+                ],
+                "photoPath": "westernStyleRoom.jpeg"
+            },
+            {
                 "name": "バルコニー",
                 "areaType": "rect",
                 "coordinates": [
@@ -182,15 +191,6 @@
                     [478,415]
                 ],
                 "photoPath": "closet.jpeg"
-            },
-            {
-                "name": "洋室",
-                "areaType": "rect",
-                "coordinates": [
-                    [10, 196],
-                    [403,414]
-                ],
-                "photoPath": "westernStyleRoom.jpeg"
             },
             {
                 "name": "トイレ",
