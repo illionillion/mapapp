@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 export const FacilityDetail = (): JSX.Element => {
   const urlParams = useParams<{ id: string }>();
   const itemId = Number(urlParams.id)
-  console.log(itemId)
+  // console.log(itemId)
     return (
       <div>
           <FacilityTitle id={itemId}/>
