@@ -5,9 +5,12 @@ interface Props{
 const FacilityText = ({id}:Props):JSX.Element => {
 
     const maptext = jsonDatas[id].text
-
+    const style = {
+        margin: '20px auto',
+        width: '80%',
+    }
     return(
-        <div>
+        <div style={style}>
             {maptext}
         </div>
     )
