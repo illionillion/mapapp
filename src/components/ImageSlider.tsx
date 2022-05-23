@@ -34,7 +34,11 @@ export const ImageSlider = ({id}:Props): JSX.Element => {
   };
   const listyle:any = {
     backgroundColor:'#ffffff',
-    margin:'10px',
+    position:'relative',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    // webkitTransform: 'translate(-50%, -50%)'//webkit記述したい
   }
   return (
     <div style={listyle}>
