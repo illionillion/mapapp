@@ -1,6 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-
-
 import { clickAreaSlice } from '../features/clickArea';
 import { AppState } from '../store';
 
@@ -24,12 +22,13 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
 	const { setClickArea } = clickAreaSlice.actions;
 
   const whenclick = (name:any) => {
-    const ele = document.querySelectorAll(`img[alt=${name}]`)[1] as HTMLElement // [2]にした場合スクロールはできる
-    const pareEle = ele.closest('[tabindex]') as HTMLElement
-    ele.click()
-    // console.log(ele);
-    // console.log(pareEle);
-    // pareEle.click()
+
+    const ele1 = document.querySelectorAll(`img[alt=${name}]`)[1] as HTMLElement // [2]にした場合スクロールはできる
+    const ele2 = document.querySelectorAll(`img[alt=${name}]`)[2] as HTMLElement // [2]にした場合スクロールはできる
+    
+    ele1.click()
+    ele2.click()
+
   }
   return (
     <area
