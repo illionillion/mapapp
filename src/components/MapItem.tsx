@@ -24,7 +24,12 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
 	const { setClickArea } = clickAreaSlice.actions;
 
   const whenclick = (name:any) => {
-    (document.querySelectorAll(`img[alt=${name}]`)[1] as HTMLElement).click()
+    const ele = document.querySelectorAll(`img[alt=${name}]`)[1] as HTMLElement // [2]にした場合スクロールはできる
+    const pareEle = ele.closest('[tabindex]') as HTMLElement
+    ele.click()
+    // console.log(ele);
+    // console.log(pareEle);
+    // pareEle.click()
   }
   return (
     <area
