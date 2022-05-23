@@ -30,7 +30,6 @@ export const ImageSlider = ({id}:Props): JSX.Element => {
     slidesToScroll: 1,
     swipeToSlide: true,
     focusOnSelect: true,
-    // autoplay: true,
   };
   const listyle:any = {
     backgroundColor:'#ffffff',
@@ -38,18 +37,18 @@ export const ImageSlider = ({id}:Props): JSX.Element => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    // webkitTransform: 'translate(-50%, -50%)'//webkit記述したい
+    WebkitTransform: 'translate(-50%, -50%)',
   }
   return (
     <div style={listyle}>
-      <Slider {...settingsMain} asNavFor={navSub} ref={sliderMain => setNavMain(sliderMain)}>
+      <Slider {...settingsMain} asNavFor={navSub} ref={({sliderMain}:{sliderMain:any}) => setNavMain(sliderMain)}>
         {clickAreaList.map((v) => (
           <li  key={v.name}>
             <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
           </li>
         ))}
       </Slider>
-      <Slider {...settingsSub} asNavFor={navMain} ref={sliderSub => setNavSub(sliderSub)}>
+      <Slider {...settingsSub} asNavFor={navMain} ref={({sliderSub}:{sliderSub:any}) => setNavSub(sliderSub)}>
         {clickAreaList.map((v) => (
           <li key={v.name}>
             <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
