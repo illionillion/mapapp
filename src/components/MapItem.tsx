@@ -13,7 +13,7 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
     }
   }
   coordsList = coordsList.replace(",", "");
-  console.log(coordsList);
+  // console.log(coordsList);
 	const { clickArea } = useSelector<
 		AppState,
 		{ clickArea: number; }
@@ -24,9 +24,7 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
 	const { setClickArea } = clickAreaSlice.actions;
 
   const whenclick = (name:any) => {
-
-    ((document.querySelector(`img[alt=${name}]`)) as HTMLElement).click()
-    
+    (document.querySelectorAll(`img[alt=${name}]`)[1] as HTMLElement).click()
   }
   return (
     <area
