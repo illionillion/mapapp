@@ -14,7 +14,7 @@ export const FacilityDetail = (): JSX.Element => {
           <FacilityTitle id={itemId}/>
           <div style={{display:'flex',alignItems:'center'}}>
             <Map id={itemId}/>
-            <div style={{width:'35%',height:'500px',margin:'auto'}}>
+            <div style={{width:'35%',height:'500px',margin:'auto',overflow:'hidden'}}>
               <ImageSlider id={itemId}/>
             </div>
           </div>
