@@ -1,7 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { clickAreaSlice } from '../features/clickArea';
+import { ClickArea } from '../types/facilityItem';
 
-const MapItem = ({ dataObj }: any): JSX.Element => {
+type Props = {
+  dataObj: {
+    id: number
+  } & ClickArea
+}
+
+const MapItem = ({ dataObj }: Props): JSX.Element => {
   const style = {};
   let coordsList = "";
   for (const i of dataObj.coordinates) {

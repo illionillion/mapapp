@@ -32,7 +32,7 @@ export const ImageSlider = ({ id }: Props): JSX.Element => {
   useEffect(() => {
     sliderRef.current?.slickGoTo(clickAreaId);
   }, [clickAreaId]);
-  const listyle: any = {
+  const listyle: React.CSSProperties = {
     backgroundColor: "#ffffff",
     position: "relative",
     top: "50%",

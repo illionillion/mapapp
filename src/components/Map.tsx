@@ -12,7 +12,7 @@ const Map = ({id}:Props):JSX.Element => {
     console.log(jsonData)
     const items = jsonData.clickAreaList
     const imageURL = jsonData.mapPath
-    const wrapstyle:any = {
+    const wrapstyle: React.CSSProperties = {
         position:'relative',
         backgroundColor:'#ffffff',
         textAlign: 'center',
