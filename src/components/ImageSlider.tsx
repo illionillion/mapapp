@@ -1,5 +1,6 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../store";
+import { clickAreaSlice } from "../features/clickArea";
 import { useEffect, useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import Facility from "../data/sample.json";
@@ -26,6 +27,8 @@ export const ImageSlider = ({ id }: Props): JSX.Element => {
       clickAreaId: state.clickArea.id,
     })
   );
+  const dispatch = useDispatch();
+  const { setClickArea } = clickAreaSlice.actions;
   useEffect(() => {
     sliderRef.current?.slickGoTo(clickAreaId);
   }, [clickAreaId]);
@@ -45,9 +48,13 @@ export const ImageSlider = ({ id }: Props): JSX.Element => {
         title={clickAreaList[clickAreaId].name}
       />
       <Slider {...sliderSettings} ref={sliderRef}>
-        {clickAreaList.map((v) => (
+        {clickAreaList.map((v, index) => (
           <li key={v.name}>
-            <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
+            <img
+              src={require(`../data/${v.photoPath}`)}
+              alt={v.name}
+              onClick={() => dispatch(setClickArea({ id: index }))}
+            />
           </li>
         ))}
       </Slider>
