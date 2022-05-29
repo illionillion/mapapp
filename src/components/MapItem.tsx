@@ -17,7 +17,6 @@ const MapItem = ({ dataObj }: Props): JSX.Element => {
     }
   }
   coordsList = coordsList.replace(",", "");
-  // console.log(coordsList);
 	const dispatch = useDispatch();
 	const { setClickArea } = clickAreaSlice.actions;
 

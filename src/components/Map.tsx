@@ -9,7 +9,6 @@ interface Props {
 const Map = ({id}:Props):JSX.Element => {
     
     const jsonData = jsonDatas[id]
-    console.log(jsonData)
     const items = jsonData.clickAreaList
     const imageURL = jsonData.mapPath
     const wrapstyle: React.CSSProperties = {
