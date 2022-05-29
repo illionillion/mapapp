@@ -1,54 +1,50 @@
-import { useState } from "react";
-import Slider from "react-slick";
+import { useSelector } from "react-redux";
+import { AppState } from "../store";
+import { useEffect, useRef } from "react";
+import Slider, { Settings } from "react-slick";
 import Facility from "../data/sample.json";
 
-
-interface Props{
-  id:number;
+interface Props {
+  id: number;
 }
 
-export const ImageSlider = ({id}:Props): JSX.Element => {
-
+export const ImageSlider = ({ id }: Props): JSX.Element => {
   const clickAreaList = Facility.clickAreaList;
-  // TODO: any型を具体的な型に修正
-  const [navMain, setNavMain] = useState<any>()
-  const [navSub, setNavSub] = useState<any>()
-  let settingsMain = {
+  const sliderRef = useRef<Slider>(null);
+  const sliderSettings: Settings = {
     arrows: false,
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
-  };
-  let settingsSub = {
-    arrows: false,
-    dots: false,
-    infinite: true,
-    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
     swipeToSlide: true,
     focusOnSelect: true,
   };
-  const listyle:any = {
-    backgroundColor:'#ffffff',
-    position:'relative',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    WebkitTransform: 'translate(-50%, -50%)',
-  }
+  const { clickAreaId } = useSelector<AppState, { clickAreaId: number }>(
+    (state) => ({
+      clickAreaId: state.clickArea.id,
+    })
+  );
+  useEffect(() => {
+    sliderRef.current?.slickGoTo(clickAreaId);
+  }, [clickAreaId]);
+  const listyle: any = {
+    backgroundColor: "#ffffff",
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    WebkitTransform: "translate(-50%, -50%)",
+  };
   return (
     <div style={listyle}>
-      <Slider {...settingsMain} asNavFor={navSub} ref={({sliderMain}:{sliderMain:any}) => setNavMain(sliderMain)}>
-        {clickAreaList.map((v) => (
-          <li  key={v.name}>
-            <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
-          </li>
-        ))}
-      </Slider>
-      <Slider {...settingsSub} asNavFor={navMain} ref={({sliderSub}:{sliderSub:any}) => setNavSub(sliderSub)}>
+      <img
+        src={require(`../data/${clickAreaList[clickAreaId].photoPath}`)}
+        alt={clickAreaList[clickAreaId].name}
+        title={clickAreaList[clickAreaId].name}
+      />
+      <Slider {...sliderSettings} ref={sliderRef}>
         {clickAreaList.map((v) => (
           <li key={v.name}>
             <img src={require(`../data/${v.photoPath}`)} alt={v.name} />
