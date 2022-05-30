@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type ClickAreaState = {
   id: number;
@@ -7,11 +7,11 @@ export type ClickAreaState = {
 const initialState: ClickAreaState = { id: 0 };
 
 export const clickAreaSlice = createSlice({
-  name: 'clickArea',
+  name: "clickArea",
   initialState,
   reducers: {
     setClickArea: (state, action: PayloadAction<ClickAreaState>) => {
       return { ...state, id: action.payload.id };
-    }
+    },
   },
 });

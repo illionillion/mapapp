@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FacilityItem } from "./FacilityItem";
-import type {Facility} from "../types/facilityItem"
+import type { Facility } from "../types/facilityItem";
 import datas from "../data/sample2.json";
 
-
 type FacilityRes = Facility & {
-    id: number
-}
+  id: number;
+};
 
-const sampleObjs = datas.map((data,index) => ({...data,id:index}));
-
+const sampleObjs = datas.map((data, index) => ({ ...data, id: index }));
 
 export const FacilityItemList = (): JSX.Element => {
   const [inputValue, setInputValue] = useState("");
@@ -25,7 +23,6 @@ export const FacilityItemList = (): JSX.Element => {
     setHitObjs(newHitObjs);
   }, [inputValue]);
 
-  
   return (
     <div className="py-12 ">
       <div className="flex  md:justify-start justify-center flex-col md:flex-row items-center gap-8">

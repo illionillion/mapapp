@@ -1,12 +1,12 @@
-import { useDispatch } from 'react-redux';
-import { clickAreaSlice } from '../features/clickArea';
-import { ClickArea } from '../types/facilityItem';
+import { useDispatch } from "react-redux";
+import { clickAreaSlice } from "../features/clickArea";
+import { ClickArea } from "../types/facilityItem.d";
 
 type Props = {
   dataObj: {
-    id: number
-  } & ClickArea
-}
+    id: number;
+  } & ClickArea;
+};
 
 const MapItem = ({ dataObj }: Props): JSX.Element => {
   const style = {};
@@ -17,16 +17,16 @@ const MapItem = ({ dataObj }: Props): JSX.Element => {
     }
   }
   coordsList = coordsList.replace(",", "");
-	const dispatch = useDispatch();
-	const { setClickArea } = clickAreaSlice.actions;
+  const dispatch = useDispatch();
+  const { setClickArea } = clickAreaSlice.actions;
 
   return (
     <area
       shape={dataObj.areaType}
       style={style}
       coords={coordsList}
-      onClick={() => dispatch(setClickArea({id: dataObj.id}))}
-			alt={dataObj.name}
+      onClick={() => dispatch(setClickArea({ id: dataObj.id }))}
+      alt={dataObj.name}
       title={dataObj.name}
     ></area>
   );
