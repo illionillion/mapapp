@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# WhereMap
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+- React
+- Redux
+- TypeScript
+- image-map
+- react-slick
+- ESlint
+- Prettier
+- Commitlint
+- staged-lint
+- husky
 
 ## Available Scripts
 
