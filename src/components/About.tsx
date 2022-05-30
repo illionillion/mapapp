@@ -1,9 +1,11 @@
 import React from "react";
+import { FacilityDetail } from "./FacilityDetail";
 
 export const About = (): JSX.Element => {
   return (
     <div className="bg-gray-200 bg-opacity-90 shadow-lg border-1 py-12 px-8">
       <h1>サービスの紹介が入ります</h1>
+      <div style={{border:'2px solid #ffffff'}}><FacilityDetail/></div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt
         quaerat libero eaque molestias, reprehenderit quisquam sunt officiis
