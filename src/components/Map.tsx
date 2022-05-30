@@ -9,10 +9,9 @@ interface Props {
 const Map = ({id}:Props):JSX.Element => {
     
     const jsonData = jsonDatas[id]
-    console.log(jsonData)
     const items = jsonData.clickAreaList
     const imageURL = jsonData.mapPath
-    const wrapstyle:any = {
+    const wrapstyle: React.CSSProperties = {
         position:'relative',
         backgroundColor:'#ffffff',
         textAlign: 'center',
@@ -24,7 +23,7 @@ const Map = ({id}:Props):JSX.Element => {
     }
     return (
         <div style={wrapstyle}>
-            <img style={imgstyle} onLoad = {(e) => ImageMap('img[usemap]')} src = {require(`../data/${imageURL}`)} useMap = "#map"/>
+            <img style={imgstyle} onLoad = {(e) => ImageMap('img[usemap]')} src = {require(`../data/${imageURL}`)} useMap = "#map" alt="見取り図"/>
             <map name="map">
                 {items.map((i,n) => <MapItem dataObj={{...i, id: n}} key={n}/>)}
             </map>
