@@ -1,1 +1,1 @@
-declare module 'image-map';
+declare module "image-map";

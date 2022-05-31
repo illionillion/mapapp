@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Footer = (): JSX.Element=> {
+export const Footer = (): JSX.Element => {
   return (
     <footer className="bg-main-color text-gray-100  px-24 pt-16 pb-8">
       <div className=" justify-between mb-24 flex flex-col md:flex-row">

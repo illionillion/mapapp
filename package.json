@@ -16,6 +16,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "@types/react-router-dom": "^5.3.3",
+    "@types/react-slick": "^0.23.8",
     "firebase": "^9.8.1",
     "image-map": "^2.0.1",
     "react": "^18.1.0",
@@ -34,13 +35,19 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
+    "lint:fix": "npm run lint -- --fix",
+    "fmt": "prettier --write src/**/*"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "yarn run lint",
+    "src/**": "yarn run fmt"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
@@ -55,9 +62,14 @@
     ]
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.8",
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "autoprefixer": "^9",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.3",
     "postcss": "^7",
+    "prettier": "^2.6.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

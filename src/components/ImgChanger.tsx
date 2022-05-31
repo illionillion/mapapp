@@ -1,15 +1,18 @@
 import React from "react";
-import {ClickArea} from "../types/facilityItem"
+import { ClickArea } from "../types/facilityItem.d";
 
 interface Props {
-  tarObj:ClickArea;
+  tarObj: ClickArea;
 }
 export const ImgChanger = ({ tarObj }: Props) => {
-
   return (
-      <div className="h-80">
-          <div>{tarObj.name}</div>
-          <img className='w-full h-full'src={require(`../data/${tarObj.photoPath}`) } alt="画像が表示されます"/>
-      </div>
-  )
+    <div className="h-80">
+      <div>{tarObj.name}</div>
+      <img
+        className="w-full h-full"
+        src={require(`../data/${tarObj.photoPath}`)}
+        alt="画像が表示されます"
+      />
+    </div>
+  );
 };

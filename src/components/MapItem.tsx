@@ -1,8 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { clickAreaSlice } from '../features/clickArea';
-import { AppState } from '../store';
+import { useDispatch } from "react-redux";
+import { clickAreaSlice } from "../features/clickArea";
+import { ClickArea } from "../types/facilityItem.d";
 
-const MapItem = ({ dataObj }: any): JSX.Element => {
+type Props = {
+  dataObj: {
+    id: number;
+  } & ClickArea;
+};
+
+const MapItem = ({ dataObj }: Props): JSX.Element => {
   const style = {};
   let coordsList = "";
   for (const i of dataObj.coordinates) {
@@ -11,35 +17,17 @@ const MapItem = ({ dataObj }: any): JSX.Element => {
     }
   }
   coordsList = coordsList.replace(",", "");
-  // console.log(coordsList);
-	const { clickArea } = useSelector<
-		AppState,
-		{ clickArea: number; }
-	>((state) => ({
-		clickArea: state.clickArea.id,
-	}));
-	const dispatch = useDispatch();
-	const { setClickArea } = clickAreaSlice.actions;
+  const dispatch = useDispatch();
+  const { setClickArea } = clickAreaSlice.actions;
 
-  const whenclick = (name:any) => {
-
-    const ele1 = document.querySelectorAll(`img[alt=${name}]`)[1] as HTMLElement // [2]にした場合スクロールはできる
-    const ele2 = document.querySelectorAll(`img[alt=${name}]`)[2] as HTMLElement // [2]にした場合スクロールはできる
-    
-    ele1.click()
-    ele2.click()
-
-  }
   return (
     <area
       shape={dataObj.areaType}
       style={style}
       coords={coordsList}
-      onClick={() => {
-				dispatch(setClickArea({id: dataObj.id}))
-        whenclick(dataObj.name)
-      }}
-			alt={dataObj.name}
+      onClick={() => dispatch(setClickArea({ id: dataObj.id }))}
+      alt={dataObj.name}
+      title={dataObj.name}
     ></area>
   );
 };

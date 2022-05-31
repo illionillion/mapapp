@@ -1,9 +1,9 @@
-import 'firebase/compat/database'
-import 'firebase/compat/storage'
+import "firebase/compat/database";
+import "firebase/compat/storage";
 
-import { initializeApp } from "firebase/app"
-import { getDatabase,onValue,set,get,push, Database } from 'firebase/database';
-import { getStorage,ref as sRef } from "firebase/storage";
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+import { getStorage, ref as sRef } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -11,13 +11,12 @@ const firebaseConfig = {
   projectId: process.env.FIREBASE_PROJECT_ID,
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   appId: process.env.FIREBASE_APP_ID,
-}
+};
 //initialize Firebase
-export const app = initializeApp(firebaseConfig)
+export const app = initializeApp(firebaseConfig);
 
 //Database
 export const db = getDatabase(app);
-
 
 // type Institution = {
 
@@ -37,4 +36,3 @@ export const db = getDatabase(app);
 //storage
 export const storage = getStorage(app);
 export const storageRef = sRef(storage);
-
