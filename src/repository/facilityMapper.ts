@@ -2,7 +2,7 @@ import {facilityDriver} from '../infrastructure/facilityDriver'
 import { Facility } from '../types/facilityItem.d'
 import { ClickArea } from '../types/facilityItem.d'
 import { Coordinate } from '../types/facilityItem.d'
-import { ClickAreaResponse } from '../types/facilityItemRespons.d'
+import { ClickAreaResponse } from '../types/facilityItemResponse.d'
 
 export const facilityMapper = async():Promise<Facility[]> => {
     const reponse = new facilityDriver().getFacilities()
