@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { FacilityItem } from "./FacilityItem";
 import type { Facility } from "../types/facilityItem";
-import datas from "../data/sample2.json";
+import { useSelector } from "react-redux";
+import { AppState } from "../store";
 
 type FacilityRes = Facility & {
   id: number;
 };
 
-const sampleObjs = datas.map((data, index) => ({ ...data, id: index }));
-
 export const FacilityItemList = (): JSX.Element => {
+  const Facilitys = useSelector((state: AppState) => state.FacilityList)
+  const sampleObjs = Facilitys.map((data, index) => ({ ...data, id: index }));
   const [inputValue, setInputValue] = useState("");
   const [hitObjs, setHitObjs] = useState<FacilityRes[]>([...sampleObjs]);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
-
   useEffect(() => {
     const newHitObjs = sampleObjs.filter((obj) =>
       obj.name.includes(inputValue)
     );
     setHitObjs(newHitObjs);
   }, [inputValue]);
-
   return (
     <div className="py-12 ">
       <div className="flex  md:justify-start justify-center flex-col md:flex-row items-center gap-8">
