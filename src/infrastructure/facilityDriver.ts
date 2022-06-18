@@ -1,6 +1,6 @@
-import { collection, getDocs, setDoc, doc} from "firebase/firestore";
+import { collection, getDocs, addDoc} from "firebase/firestore";
 import { db } from "../firebase/firebase";
-import {FacilityResponse} from "../types/facilityItemRespons.d"
+import {FacilityResponse} from "../types/facilityItemResponse.d"
 
 export class facilityDriver {
     getFacilities = async():Promise<FacilityResponse[]> => {
@@ -12,7 +12,12 @@ export class facilityDriver {
         return response
     }
     setFacility = async(data:FacilityResponse):Promise<void> => {
-        await setDoc(doc(db, "facility"), data);
+        try{
+            await addDoc(collection(db, "facility"), data);
+        }catch(err){
+            console.log(err);
+        }
+        
     }
 }
 
