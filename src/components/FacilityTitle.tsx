@@ -1,10 +1,12 @@
-import jsonDatas from "../data/sample2.json";
+import { useSelector } from "react-redux";
+import { AppState } from "../store";
+import { Facility } from "../types/facilityItem.d";
 interface Props {
   id: number;
 }
 const FacilityTitle = ({ id }: Props): JSX.Element => {
-  const mapname = jsonDatas[id].name;
-
+  const facilityList:Facility[] = useSelector((state:AppState)=> state.FacilityList )
+  const mapname = facilityList[id] ? facilityList[id].name : ''
   const style = {
     fontSize: "2em",
     margin: "15px auto",

@@ -13,4 +13,4 @@ export type ClickArea = {
   photoPath: string;
 };
 
-type Coordinate = number[];
+export type Coordinate = number[];
